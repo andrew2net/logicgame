@@ -21,7 +21,7 @@ const operators = [
 class Board extends Component {
   constructor(props) {
     super(props);
-    this.state = { positions: [0 ,1, 2, 3], ops: 0, result: '' };
+    this.state = { positions: [0 ,1, 2, 3], ops: 0, result: null };
   }
 
   validate = () => {
@@ -41,13 +41,12 @@ class Board extends Component {
 
     const expr = numOpers.join('').replace('=', '===');
     const result = eval(expr);
-    console.log(result);
-    this.setState({ result: result ? 'thumbs-up' : 'thumbs-down' });
+    this.setState({ result: result });
     setTimeout(() => {
       let nextOps = this.state.ops;
       if (result) nextOps++;
       if (nextOps > (operators.length - 1)) nextOps = 0;
-      this.setState({ positions: [0, 1, 2, 3], ops: nextOps, result: '' });
+      this.setState({ positions: [0, 1, 2, 3], ops: nextOps, result: null });
     }, 1000);
   }
 
