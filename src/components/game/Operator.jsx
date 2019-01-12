@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 
-class Operator extends Component {
-  render(){
-    return(
-      <div className="Operator">{this.props.sign}</div>
-    );
-  }
+function Operator(props) {
+  return(
+    <div className="Operator">{props.sign}</div>
+  );
 }
 
 export default Operator;

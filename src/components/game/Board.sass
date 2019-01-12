@@ -4,7 +4,7 @@
   display: flex
   user-select: none
 
-.BoardRow
+.Row
   display: flex
   flex-direction: row
 
@@ -50,3 +50,41 @@
 .modalContent
   position: absolute
   outline: none
+
+.currentScope
+  list-style: none
+  > li
+    float: right
+    padding: 5px 15px
+    > svg
+      position: relative
+      &[data-icon='thumbs-up']
+        bottom: 2px
+      &[data-icon='thumbs-down']
+        top: 2px
+
+.Scope
+  font-size: 8vw
+  background: white
+  padding: 4vw
+  border: 1px solid black
+  .Row
+    justify-content: center
+    text-transform: uppercase
+    button
+      font-size: 4vw
+      cursor: pointer
+      text-transform: uppercase
+    ul
+      font-size: 6vw
+      list-style: none
+      display: inline-flex
+      margin: 0
+      > li
+        padding: 3vw 3vw
+        > svg
+          position: relative
+          &[data-icon='thumbs-up']
+            bottom: 1vw
+          &[data-icon='thumbs-down']
+            top: 1vw

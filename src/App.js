@@ -30,6 +30,7 @@ class Home extends Component {
     );
   }
 }
+
 const Game = lazy(() => import('./components/game/Game'));
 
 class App extends Component {

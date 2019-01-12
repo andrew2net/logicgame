@@ -6,6 +6,8 @@ import TilePlace from './TilePlace';
 import TilePreview from './TilePreview';
 import Operator from './Operator';
 import Result from './Result';
+import CurrentScope from './CurrentScope';
+import Scope from './Scope';
 import './Board.sass';
 
 library.add(faThumbsUp, faThumbsDown);
@@ -21,7 +23,13 @@ const operators = [
 class Board extends Component {
   constructor(props) {
     super(props);
-    this.state = { positions: [0 ,1, 2, 3], ops: 0, result: null };
+    this.state = {
+      positions: [0 ,1, 2, 3],
+      ops: 0,
+      result: null,
+      currentScope: { up: 0, down: 0 },
+      scope: null //{ up: 2, down: 1 }
+    };
   }
 
   validate = () => {
@@ -44,9 +52,26 @@ class Board extends Component {
     this.setState({ result: result });
     setTimeout(() => {
       let nextOps = this.state.ops;
-      if (result) nextOps++;
-      if (nextOps > (operators.length - 1)) nextOps = 0;
-      this.setState({ positions: [0, 1, 2, 3], ops: nextOps, result: null });
+      let currentScope = Object.assign({}, this.state.currentScope);
+      let scope = null;
+
+      if (result) {
+        nextOps++;
+        currentScope.up++;
+      } else currentScope.down++;
+
+      if (nextOps >= operators.length) {
+        nextOps = operators.length - 1;
+        scope = currentScope;
+      }
+
+      this.setState({
+        positions: [0, 1, 2, 3],
+        ops: nextOps,
+        result: null,
+        currentScope: currentScope,
+        scope: scope
+      });
     }, 1000);
   }
 
@@ -108,16 +133,20 @@ class Board extends Component {
 
   render() {
     return(
-      <div className="Board">
-        <div className="BoardRow">
-          {this.renderNumbers()}
+      <div>
+        <div className="Board">
+          <div className="Row">
+            {this.renderNumbers()}
+          </div>
+          <div className="Row">
+            {this.renderOperators()}
+          </div>
+          <TilePreview />
+          <Result result={this.state.result} />
+          <Scope scope={this.state.scope} />
         </div>
-        <div className="BoardRow">
-          {this.renderOperators()}
-        </div>
-        <TilePreview />
-        <Result result={this.state.result} />
-      </div>
+        <CurrentScope scope={this.state.currentScope}/>
+     </div> 
     );
   }
 }
