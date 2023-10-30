@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Link,Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link,Switch, BrowserRouter } from 'react-router-dom';
 import MtSvgLines from 'react-mt-svg-lines';
 // import Game from './components/game/Game';
 // import logo from './logo.svg';
@@ -36,24 +36,26 @@ const Game = lazy(() => import('./components/game/Game'));
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Router>
-          <Suspense fallback={<div>Loading...</div>}>
-            <div className='container'>
-              <ul className='nav'>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/game'>Game</Link></li>
-              </ul>
-              <div className='GameContainer'>
-                <Switch>
-                  <Route exact path='/' component={Home} />
-                  <Route path='/game' render={props => <Game {...props} />} />
-                </Switch>
+      <BrowserRouter basename='/logicgame'>
+        <div className="App">
+          <Router>
+            <Suspense fallback={<div>Loading...</div>}>
+              <div className='container'>
+                <ul className='nav'>
+                  <li><Link to='/logicgame'>Home</Link></li>
+                  <li><Link to='/logicgame/game'>Game</Link></li>
+                </ul>
+                <div className='GameContainer'>
+                  <Switch>
+                    <Route exact path='/logicgame' component={Home} />
+                    <Route path='/logicgame/game' render={props => <Game {...props} />} />
+                  </Switch>
+                </div>
               </div>
-            </div>
-          </Suspense>
-        </Router>
-      </div>
+            </Suspense>
+          </Router>
+        </div>
+      </BrowserRouter>
     );
   }
 }

@@ -19,7 +19,7 @@ export default function Scope(props) {
       </div>
       <div className='Row'>
         <Route render={({ history }) => (
-          <button type='button' onClick={() => { history.push('/')}}>Close</button>
+          <button type='button' onClick={() => { history.push('/logicgame')}}>Close</button>
         )} />
       </div>
     </ReactModal>
