@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/logicgame/static/js/main.3e762849.chunk.js"
   },
   {
-    "revision": "f6c8f18daedc5fa0f6b0",
-    "url": "/logicgame/static/js/runtime~main.f6c8f18d.js"
+    "revision": "7478040919c85ddbbf33",
+    "url": "/logicgame/static/js/runtime~main.74780409.js"
   },
   {
     "revision": "507a3258090bf35b9124",
@@ -20,15 +20,15 @@ self.__precacheManifest = [
     "url": "/logicgame/static/js/3.4b70f464.chunk.js"
   },
   {
-    "revision": "faa335626dac2ff6948f",
+    "revision": "c39ae5a4a14f177cf52d",
     "url": "/logicgame/static/css/4.c3914b1a.chunk.css"
   },
   {
-    "revision": "faa335626dac2ff6948f",
-    "url": "/logicgame/static/js/4.faa33562.chunk.js"
+    "revision": "c39ae5a4a14f177cf52d",
+    "url": "/logicgame/static/js/4.c39ae5a4.chunk.js"
   },
   {
-    "revision": "f662123658f2530517813b225708bb49",
+    "revision": "c75ee575114b1d8030c385a6bcfae8ac",
     "url": "/logicgame/index.html"
   }
 ];
