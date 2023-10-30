@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/logicgame/precache-manifest.5838ea676fa981ee9d6e7dd6e6f2696a.js"
+  "/logicgame/precache-manifest.e5fdc516a9169faa6bef47aecdab2031.js"
 );
 
 workbox.clientsClaim();
