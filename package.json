@@ -1,6 +1,7 @@
 {
   "name": "logicgame",
   "version": "0.1.0",
+  "homepage": "https://andrew2net.github.io/logicgame",
   "private": true,
   "engines": {
     "npm": "6.4.1",
@@ -25,6 +26,8 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
@@ -40,11 +43,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "react-test-renderer": "^16.7.0",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "enzyme": "^3.8.0",
+    "gh-pages": "^6.0.0",
+    "react-test-renderer": "^16.7.0",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.1"
   }
