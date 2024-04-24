@@ -1,4 +1,7 @@
-This project is hosted on (Gihub Pages)[https://pages.github.com/]. You can view the project by clicking [here](https://andrew2net.github.io/logicgame).
+# Logic Game
+
+This project is hosted on [GitHub Pages](https://pages.github.com/). You can view the project by clicking [here](https://andrew2net.github.io/logicgame).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
