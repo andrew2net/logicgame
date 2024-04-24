@@ -1,6 +1,6 @@
 # Logic Game
 
-This is a simple logic game that I created to help me learn React. The game is a simple grid of squares with numbers that can be pulled and dropped in simple equations. The goal of the game is to place numbers in correct places to make equations correct. The game gives you a score based on how many equations you solve. The game is over when you solve all the equations.
+This is a simple logic game that I created to help me learn React. The game is a simple grid of squares with numbers that can be pulled and dropped in simple equations. The goal of the game is to place numbers in the right places to make equations correct. The left and right parts of the equations are constrained to be positive values only. The game gives you a score based on how many equations you solve and how many mistakes you make. The game is over when you solve all the equations.
 
 This project is hosted on [GitHub Pages](https://pages.github.com/). You can view the project by clicking [here](https://andrew2net.github.io/logicgame).
 
