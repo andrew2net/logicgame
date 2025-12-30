@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="container"
+  >
+    <ul
+      className="nav"
+    >
+      <li>
+        <a
+          href="/logicgame"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/logicgame/game"
+          onClick={[Function]}
+        >
+          Game
+        </a>
+      </li>
+    </ul>
+    <div
+      className="GameContainer"
+    />
+  </div>
+</div>
+`;
