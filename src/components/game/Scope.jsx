@@ -10,7 +10,7 @@ export default function Scope(props) {
     <ReactModal isOpen={props.scope !== null}
     shouldCloseOnOverlayClick={true}
     overlayClassName='modalOverlay' className='modalContent Scope'>
-      <div className='Row'>Scope {props.scope && props.scope.up - props.scope.down}</div>
+      <div className='Row'>Score {props.scope && props.scope.up - props.scope.down}</div>
       <div className='Row'>
         <ul>
           <li><FontAwesomeIcon icon='thumbs-up' /> {props.scope && props.scope.up}</li>
