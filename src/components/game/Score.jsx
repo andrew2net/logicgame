@@ -5,11 +5,11 @@ import ReactModal from 'react-modal';
 
 ReactModal.setAppElement('#root');
 
-export default function Scope(props) {
+export default function Score(props) {
   return(
     <ReactModal isOpen={props.score !== null}
     shouldCloseOnOverlayClick={true}
-    overlayClassName='modalOverlay' className='modalContent Scope'>
+    overlayClassName='modalOverlay' className='modalContent Score'>
       <div className='Row'>Score {props.score && props.score.up - props.score.down}</div>
       <div className='Row'>
         <ul>

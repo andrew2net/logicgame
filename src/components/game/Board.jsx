@@ -6,8 +6,8 @@ import TilePlace from './TilePlace';
 import TilePreview from './TilePreview';
 import Operator from './Operator';
 import Result from './Result';
-import CurrentScope from './CurrentScope';
-import Scope from './Scope';
+import CurrentScore from './CurrentScore';
+import Score from './Score';
 import './Board.sass';
 
 library.add(faThumbsUp, faThumbsDown);
@@ -27,8 +27,8 @@ class Board extends Component {
       positions: [0 ,1, 2, 3],
       ops: 0,
       result: null,
-      currentScope: { up: 0, down: 0 },
-      scope: null //{ up: 2, down: 1 }
+      currentScore: { up: 0, down: 0 },
+      score: null //{ up: 2, down: 1 }
     };
   }
 
@@ -52,25 +52,25 @@ class Board extends Component {
     this.setState({ result: result });
     setTimeout(() => {
       let nextOps = this.state.ops;
-      let currentScope = Object.assign({}, this.state.currentScope);
-      let scope = null;
+      let currentScore = Object.assign({}, this.state.currentScore);
+      let score = null;
 
       if (result) {
         nextOps++;
-        currentScope.up++;
-      } else currentScope.down++;
+        currentScore.up++;
+      } else currentScore.down++;
 
       if (nextOps >= operators.length) {
         nextOps = operators.length - 1;
-        scope = currentScope;
+        score = currentScore;
       }
 
       this.setState({
         positions: [0, 1, 2, 3],
         ops: nextOps,
         result: null,
-        currentScope: currentScope,
-        scope: scope
+        currentScore: currentScore,
+        score: score
       });
     }, 1000);
   }
@@ -100,7 +100,7 @@ class Board extends Component {
           if (prevIdx >= 0 && numbers[prevIdx] < number) return false;
         }
         break;
-    
+
       default:
         return true;
     }
@@ -143,10 +143,10 @@ class Board extends Component {
           </div>
           <TilePreview />
           <Result result={this.state.result} />
-          <Scope scope={this.state.scope} />
+          <Score score={this.state.score} />
         </div>
-        <CurrentScope scope={this.state.currentScope}/>
-     </div> 
+        <CurrentScore score={this.state.currentScore}/>
+     </div>
     );
   }
 }
