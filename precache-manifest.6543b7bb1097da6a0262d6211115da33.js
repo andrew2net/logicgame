@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e3b89bdb807e9341e1a51cd11d6cb98",
+    "revision": "4c3467d01196ea74e69e5d4c76b1ca3e",
     "url": "/logicgame/index.html"
   },
   {
-    "revision": "57e016bdc22b54f9d811",
-    "url": "/logicgame/static/css/4.f110db31.chunk.css"
+    "revision": "fee8adb1d90993f73a94",
+    "url": "/logicgame/static/css/4.997c7fe2.chunk.css"
   },
   {
     "revision": "9652ea7b3d79efb31b8e",
@@ -28,15 +28,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/logicgame/static/js/3.6aec925e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "57e016bdc22b54f9d811",
-    "url": "/logicgame/static/js/4.a332a00a.chunk.js"
+    "revision": "fee8adb1d90993f73a94",
+    "url": "/logicgame/static/js/4.21b789d7.chunk.js"
   },
   {
     "revision": "9652ea7b3d79efb31b8e",
     "url": "/logicgame/static/js/main.4fb0dfb0.chunk.js"
   },
   {
-    "revision": "3af2e00ade587aa155fd",
-    "url": "/logicgame/static/js/runtime-main.41326200.js"
+    "revision": "38deaab6bc9225e29a8d",
+    "url": "/logicgame/static/js/runtime-main.be1335b6.js"
   }
 ]);
